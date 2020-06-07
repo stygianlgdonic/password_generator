@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+Home
+{% endblock head_title %}
+
+{% block page_title %}
+Password Generator
+{% endblock page_title %}
+
+{% block content %}
+<form action="{% url 'password' %}">
+    <div class="form-group">
+        <label>Password Length</label>
+        <select class="form-control" name="length">
+            <option value="8">8</option>
+            <option value="9" selected>9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <br>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="uppercase">
+                Use uppercase
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="numbers">
+                Use numbers
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="special">
+                Use special characters
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary float-right">
+        Generate
+    </button>
+</form>
+{% endblock content %}
