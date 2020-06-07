@@ -1,2 +1,2 @@
 # password_generator
-Simple Password Generator
+Simple Password Generator in Django Framework
